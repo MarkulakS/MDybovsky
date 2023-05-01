@@ -165,29 +165,36 @@ section {
     flex-direction: row;
     align-items: center;
     .img-grid {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
         justify-content: center;
         align-items: center;
         width: 50%;
         height: auto;
-        gap: 4rem;
         margin: auto;
+        img {
+            margin: auto;
+        }
         .img-1 {
-            width: 200px;
-            height: 200px;
+            grid-area: 1/1;
+            width: 70%;
+            height: 90%;
         }
         .img-2 {
-            width: 225px;
-            height: 175px;
+            grid-area: 1/2;
+            width: 70%;
+            height: 60%;
         }
         .img-3 {
-            width: 125px;
-            height: 150px;
+            grid-area: 2/1;
+            width: 40%;
+            height: 60%;
         }
         .img-4 {
-            width: 300px;
-            height: 200px;
+            grid-area: 2/2;
+            width: 90%;
+            height: 80%;        
         }
     }
     .wall {
@@ -220,7 +227,7 @@ section {
         .title {
             transform: rotate(-90deg);
             margin: auto;
-            margin-top: 250px;
+            margin-top: 35vh;
         }
     }
     .text {
@@ -233,21 +240,23 @@ section {
         display: grid;
         grid-template-rows: 100px 2fr 100px;
         grid-template-columns: 80px 2fr 80px;
+        width: 100%;
+        height: 75%;
         margin: auto;
         margin-left: 0px;
         .bg-img {
             grid-column: 1/3;
             grid-row: 1/3;
-            width: 600px;
-            height: 350px;
+            width: 90%;
+            height: 100%;
             background-color: $--clr-gold;
         }
 
         .img {
             grid-column: 2/4;
             grid-row: 2/4;
-            width: 600px;
-            height: 350px;
+            width: 90%;
+            height: 100%;
             background-image: url("/assets/images/Widok z okna.png");
             background-size: cover;
             box-shadow: 0 0 20px #000;
@@ -269,20 +278,24 @@ section {
         display: grid;
         grid-template-rows: 100px 2fr 100px;
         grid-template-columns: 150px 2fr 150px;
+        width: 70%;
+        height: 100%;
         margin: auto;
 
         .bg-img {
+            margin: auto;
             grid-column: 2/4;
             grid-row: 1/3;
-            width: 600px;
-            height: 350px;
+            width: 90%;
+            height: 70%;
             background-color: $--clr-gold;
         }
         .img {
+            margin: auto;
             grid-column: 1/3;
             grid-row: 2/4;
-            width: 600px;
-            height: 350px;
+            width: 90%;
+            height: 70%;
             background-image: url("/assets/images/pociag.JPG");
             background-size: cover;
             box-shadow: 0 0 20px #000;
@@ -318,20 +331,24 @@ section {
         display: grid;
         grid-template-rows: 60px 2fr 60px;
         grid-template-columns: 120px 2fr 120px;
+        width: 70%;
+        height: 100%;
         margin: auto;
         margin-right: 0;
         .bg-img {
+            margin: auto;
             grid-column: 2/4;
             grid-row: 1/3;
-            width: 500px;
-            height: 350px;
+            width: 80%;
+            height: 70%;
             background-color: $--clr-gray;
         }
         .img {
+            margin: auto;
             grid-column: 1/3;
             grid-row: 2/4;
-            width: 550px;
-            height: 380px;
+            width: 80%;
+            height: 70%;
             background-image: url("/assets/images/rys1.JPG");
             background-size: cover;
             box-shadow: 0 0 20px #000;
@@ -347,12 +364,14 @@ section {
         width: 100%;
         grid-template-rows: 60px 1fr 1fr 60px;
         grid-template-columns: 300px 1fr 200px 1fr;
+        width: 100%;
+        height: 100%;
         margin: auto;
         .bg-img-1 {
             grid-column: 4;
             grid-row: 2/3;
-            width: 400px;
-            height: 150px;
+            width: 110%;
+            height: 60%;
             margin: auto;
             margin-left: -100px;
             margin-top: -30px;
@@ -361,17 +380,18 @@ section {
         .bg-img-2 {
             grid-column: 1/2;
             grid-row: 3/4;
-            width: 300px;
-            height: 150px;
+            width: 150%;
+            height: 60%;
             margin: auto;
             margin-bottom: 0;
             background-color: $--clr-gray;
         }
         .img {
+            margin: auto;
             grid-column: 2/4;
             grid-row: 2/4;
-            width: 600px;
-            height: 400px;
+            width: 120%;
+            height: 90%;
             background-image: url("/assets/images/rys2.JPG");
             background-size: cover;
             box-shadow: 0 0 20px #000;
@@ -389,8 +409,8 @@ section {
         height: 100%;
         margin: auto;
         .img {
-            width: 400px;
-            height: 550px;
+            width: 70%;
+            height: 90%;
             background-color: $--clr-gold;
             box-shadow: 0 0 20px #000;
         }
@@ -417,8 +437,8 @@ section {
         width: 65%;
         background-color: $--clr-gray;
         .img {
-            width: 600px;
-            height: 400px;
+            width: 80%;
+            height: 70%;
             background-color: $--clr-gold;
             background-image: url("/assets/images/Łazienka-1.jpg");
             background-size: cover;
@@ -454,16 +474,16 @@ section {
     .left-img {
         background-color: $--clr-gray;
         .img{
-            width: 400px;
-            height: 550px;
+            width: 60%;
+            height: 90%;
             background-image: url("/assets/images/Łazienka-2.jpg");
             background-size: cover;
             box-shadow: 0 0 20px #000;
         }
     }
     .right-img .img{
-        width: 525px;
-        height: 325px;
+        width: 90%;
+        height: 50%;
         background-image: url("/assets/images/Sypialnia-1.jpg");
         background-size: cover;
         box-shadow: 0 0 20px #000;
@@ -488,32 +508,32 @@ section {
         width: 50%;
         p {
             margin: auto;
-            margin-left: 20px;
+            margin-left: 5%;
             font-size: 1.1rem;
         }
         .title {
             margin: auto;
-            margin-right: 50px;
+            margin-right: 10%;
         }
         .img-grid {
             display: grid;
-            width: 300px;
-            height: 300px;
-            grid-template-rows: 30px 100px 50px;
-            grid-template-columns: 40px 100px 50px;
+            width: 50%;
+            height: 50%;
+            grid-template-rows: 30px 1fr 30px;
+            grid-template-columns: 40px 1fr 40px;
             margin: auto;
-            margin-top: 50px;
+            margin-top: 10%;
             img {
-                grid-area: 1/2/2/3;
-                width: 250px;
-                height: 250px;
+                grid-area: 1/2/3/4;
+                width: 100%;
+                height: 100%;
                 z-index: 1;
                 box-shadow: 0 0 20px #000;
             }
             .bg-img {
-                grid-area: 2/1/3/2;
-                width: 250px;
-                height: 250px;
+                grid-area: 2/1/4/3;
+                width: 100%;
+                height: 100%;
                 background-color: $--clr-gray;
             }
         }
@@ -522,6 +542,7 @@ section {
 
 .label {
     display: flex;
+    margin: auto;
     .text {
         display: flex;
         flex-direction: column;
@@ -533,34 +554,44 @@ section {
         background-color: $--clr-black;
         .title {
             font-size: 6rem;
-            margin-left: -65px;
-            margin-bottom: 50px;
+            margin-left: -32.5%;
+            margin-bottom: 20%;
             width: 350px;
             transform: rotateZ(-90deg);
             line-height: 6rem;
         }
         p {
-            padding: 0 20px;
+            padding: 0 10%;
         }
     }
     .img-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1.5fr 2fr;
         width: 60%;
-        margin-top: 50px;
+        height: 100%;
+        margin: auto;
+        margin-left: 0;
         .img-1, .img-2 {
-            width: 300px;
-            height: 200px;
+            margin: auto;
+            margin-bottom: 0;
+            width: 90%;
+            height: 80%;
         }
         .img-1 {
-            transform: rotateZ(-2deg);
-            margin-left: -20px;
+            transform: rotateZ(-5deg);
         }
         .img-2 {
-            transform: rotateZ(34deg);
-            margin-bottom:5px;
+            transform: rotateZ(37deg);
+            margin-left: -5%;
+            margin-bottom: 1%;
         }
         .img-3 {
-            width: 600px;
-            height: 350px;
+            grid-column: 1/3;
+            grid-row: 2;
+            margin: auto;
+            width: 80%;
+            height: 95%;
         }
     }
 }
@@ -651,7 +682,7 @@ section {
                 font-size: 6rem;
                 transform: rotateZ(-90deg);
                 margin: auto;
-                margin-bottom: 150px;
+                margin-bottom: 20vh;
             }
         }
         .bg-img {
@@ -673,8 +704,8 @@ section {
         display: inset;
         top: -3em;
         right: -20em;
-        width: 700px;
-        height: 700px;
+        width: 50vw;
+        height: 100vh;
         background-color: $--clr-gold;
         border-radius: 50% 50%;
         z-index: -1;
@@ -691,10 +722,16 @@ section {
         height: 100%;
         z-index: 0;
         .image {
+            display: flex;
+            width: 40%;
+            height: 100%;
+            margin: auto;
             margin-left: 25%;
             img {
                 margin: auto;
-                width: 400px;
+                margin-left: 0;
+                width: 90%;
+                height: 95%;
                 box-shadow: 0 0 20px #000;
             }
         }
@@ -745,7 +782,7 @@ section {
         position: absolute;
         top: 0;
         left: 0;
-        width: 400px;
+        width: 30%;
         height: 100%;
         background-color: $--clr-black;
         z-index: -1;
@@ -788,15 +825,15 @@ section {
         background-size: cover;
     }
     .rectangle-1 {
-        width: 100px;
-        height: 450px;
+        width: 10%;
+        height: 75%;
         margin: auto;
         margin-right: 0;
         background-color: $--clr-black;
     }
     .rectangle-2 {
-        width: 100px;
-        height: 450px;
+        width: 9%;
+        height: 75%;
         margin: auto;
         margin-right: 0;
         background-color: $--clr-gold;
@@ -858,8 +895,8 @@ section {
             }
         }
         .text {
-            margin-left: 25px;
-            margin-top: 25px;
+            margin-left: 5%;
+            margin-top: 5%;
         }
     }
 }
@@ -882,8 +919,8 @@ section {
             grid-template-columns: 25px;
             grid-template-rows: 30px 30px 30px;
             margin: auto;
-            margin-bottom: 50px;
-            margin-left: 30px;
+            margin-bottom: 15%;
+            margin-left: 10%;
             .square-1 {
                 width: 15px;
                 height: 15px;
@@ -926,7 +963,7 @@ section {
             display: grid;
             grid-template-rows: 30px 30px 30px;
             grid-template-columns: 30px 30px 30px;
-            margin-top: -40px;
+            margin-top: -5%;
             margin-left: 15%;
             .sq {
                 width: 10px;
@@ -967,21 +1004,21 @@ section {
         content: '';
         position: absolute;
         top: 0;
-        left: 300px;
-        width: 125px;
+        left: 20vw;
+        width: 8vw;
         height: 100%;
         background-color: $--clr-black;
         z-index: -1;
     }
     .text {
         width: 30%;
-        margin-top: 50px;
-        margin-right: 70px;
+        margin-top: 10vh;
+        margin-right: 5vw;
         text-align: right;
         .title {
             font-size: 6rem;
             line-height: 6rem;
-            margin-bottom: 40px;
+            margin-bottom: 5vh;
         }
     }
 }
@@ -1028,7 +1065,7 @@ section {
         }
     }
     .rectangle {
-        width: 125px;
+        width: 8vw;
         height: 100%;
         background-color: $--clr-black;
     }
@@ -1048,9 +1085,9 @@ section {
         width: 70%;
         height: 65%;
         margin: auto;
-        margin-top: 70px;
+        margin-top: 7%;
         margin-left: 0;
-        margin-right: -100px;
+        margin-right: -10%;
         padding-left: 100px;
         z-index: 0;
         .image {
@@ -1066,7 +1103,7 @@ section {
         bottom: 0;
         left: 0;
         width: 55%;
-        height: 125px;
+        height: 25%;
         background-color: $--clr-gold;
         z-index: -1;
     }
@@ -1074,9 +1111,9 @@ section {
         content: '';
         position: absolute;
         top: 0;
-        right: 0;
-        width: 125px;
-        height: 125px;
+        right: 5%;
+        width: 10%;
+        height: 25%;
         background-color: $--clr-gold;
         z-index: -1;
     }
@@ -1086,18 +1123,18 @@ section {
         flex-direction: column;
         justify-content: flex-end;
         text-align: right;
-        height: 300px;
+        height: 45%;
         margin: auto;
-        margin-bottom: 50px;
-        margin-right: 50px;
-        margin-left: -100px;
+        margin-bottom: 4%;
+        margin-right: 5%;
+        margin-left: -10%;
         font-size: 1.2rem;
         .title {
             font-size: 6rem;
             line-height: 5rem;
         }
         p {
-            margin-bottom: 20px;
+            margin-bottom: 2%;
         }
 
     }
@@ -1105,8 +1142,8 @@ section {
         content: '';
         position: absolute;
         top: 0;
-        right: -15px;
-        width: 5px;
+        right: -5%;
+        width: 2%;
         height: 100%;
         background-color: $--clr-gold;
     }
@@ -1116,7 +1153,7 @@ section {
     display: flex;
     flex-direction: row;
     .image {
-        margin-left: 50px;
+        margin-left: 5%;
         width: 50%;
         background-image: url("/assets/images/Logo zimowiska.png");
         background-size: cover;
@@ -1127,22 +1164,22 @@ section {
         justify-content: flex-end;
         text-align: right;
         margin: auto;
-        margin-bottom: 70px;
-        margin-right: 100px;
+        margin-bottom: 7%;
+        margin-right: 10%;
         .title {
             position: relative;
             z-index: 0;
             font-size: 6rem;
             line-height: 5.5rem;
-            margin-bottom: 20px;
+            margin-bottom: 5%;
         }
         .title:before {
             content: '';
             position: absolute;
             top: -3rem;
             right: 4rem;
-            width: 175px;
-            height: 175px;
+            width: 50%;
+            height: 100%;
             border-radius: 50% 50%;
             background-color: #56cbf5;
             z-index: -1;
