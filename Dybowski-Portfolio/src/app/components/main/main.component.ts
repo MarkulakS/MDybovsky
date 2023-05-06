@@ -14,13 +14,14 @@ export class MainComponent implements OnInit {
 
   ngOnInit(): void {
     const box = document.querySelector('.about');
+    const nav = document.querySelector('.navbar');
     // const msg = document.querySelector('.tex');
   
     function isInViewport(element: any) {
       const elementRect = element.getBoundingClientRect();
       // console.log(elementRect)
       return (
-          elementRect.top <= 100
+           elementRect.bottom >=10
       );
     }
   
@@ -28,9 +29,10 @@ export class MainComponent implements OnInit {
       if (isInViewport(box)) {
         // console.log("Widoczny");
         // msg!.textContent = "widoczny";
+        nav?.classList.add('nav-OFF');
       } else {
         // console.log("Niewidoczny");
-        // msg!.textContent = "niewidoczny";
+        nav?.classList.remove('nav-OFF');
       }
     });
   }
