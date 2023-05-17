@@ -92,7 +92,7 @@
         </div>
     </section>
 
-    <section id="section-4" class="painting-1">
+    <section name="section4" id="section-4" class="painting-1">
         <div class="paint-title">
             <h1 class="title">malarstwo.</h1>
         </div>
@@ -107,7 +107,7 @@
         </div>
     </section>
 
-    <section class="painting-2">
+    <section name="section4" id="section-4" class="painting-2">
         <div class="text">
             <p>Malowidło przedstawiające<br>dworzec kolejowy.</p>
         </div>
@@ -134,7 +134,7 @@
         </div>
     </section>
 
-    <section class="rys-2">
+    <section id="section-5" class="rys-2">
         <div class="img-grid">
             <div class="bg-img-1"></div>
             <div class="bg-img-2"></div>
@@ -142,7 +142,7 @@
         </div>
     </section>
 
-    <section class="rys-3">
+    <section id="section-5" class="rys-3">
         <div class="left-img">
             <div class="img img-1"></div>
         </div>
@@ -164,7 +164,7 @@
         </div>
     </section>
 
-    <section class="visual-2">
+    <section id="section-6" class="visual-2">
         <div class="left-img">
             <div class="img"></div>
         </div>
@@ -394,40 +394,125 @@
     </div>
 </div>
 
-<!-- <div class="navbar nav-OFF">
+<div class="navbar nav-OFF">
     <div class="left-bar">
         <div class="list">
-                <i class="fa-solid fa-circle"></i>
-            <h1><a class="title" href="#home">główna</a></h1>
-                <i class="fa-regular fa-circle"></i>
-            <h1><a class="title" href="#section-3">grafika 3D</a></h1>
-                <i class="fa-regular fa-circle"></i>
-            <h1><a class="title" href="#section-4">malarstwo</a></h1>
-                <i class="fa-regular fa-circle"></i>
-            <h1><a class="title" href="#section-5">rysunek odręczny</a></h1>
-                <i class="fa-regular fa-circle"></i>
-            <h1><a class="title" href="#section-6">wizualizacje</a></h1>
-                <i class="fa-regular fa-circle"></i>
-            <h1><a class="title" href="#section-7">struktury</a></h1>
-                <i class="fa-regular fa-circle"></i>
-            <h1><a class="title" href="#section-8">etykieta na kubek</a></h1>
-                <i class="fa-regular fa-circle"></i>
-            <h1><a class="title" href="#section-9">moja butelka</a></h1>
-                <i class="fa-regular fa-circle"></i>
-            <h1><a class="title" href="#section-10">plansze</a></h1>
-                <i class="fa-regular fa-circle"></i>
-            <h1><a class="title" href="#section-11">ulotka</a></h1>
-                <i class="fa-regular fa-circle"></i>
-            <h1><a class="title" href="#section-12">projekt siedziska</a></h1>
-                <i class="fa-regular fa-circle"></i>
-            <h1><a class="title" href="#section-13">koszulki</a></h1>
-                <i class="fa-regular fa-circle"></i>
-            <h1><a class="title" href="#section-14">plakietka z logo</a></h1>
-                <i class="fa-regular fa-circle"></i>
-            <h1><a class="title" href="#section-15">moduł</a></h1>
-                <i class="fa-regular fa-circle"></i>
-            <h1><a class="title" href="#contact">kontakt</a></h1>
-                <i class="fa-solid fa-circle"></i>
+            <div class="circle">
+                <a href="#home"><i id="ic-home" class="fa-solid fa-house in-circle"></i></a>
+            </div>
+            <!-- <div *ngFor="" class="item">
+                <div class="icon">
+                    <a href="#{{href_section}}"><i class="fa-solid {{icon}}"></i></a>
+                </div>
+                <div id="{{id}}" class="nav-text">
+                    <h1><a href="{{href_section}}" class="title">{{title_section}}</a></h1>
+                </div>
+            </div> -->
+            <div class="item">
+                <div class="icon">
+                    <i id="graphics-ico" class="fa-solid fa-cube "></i>
+                </div>
+                <div class="nav-text">
+                    <h1><a class="title" href="#section-3">grafika 3D</a></h1>
+                </div>
+            </div>
+            <div class="item">
+                <div class="icon">
+                    <i class="fa-solid fa-brush"></i>
+                </div>
+                <div id="painting" class="nav-text">
+                    <h1><a class="title" href="#section-4">malarstwo</a></h1>
+                </div>
+            </div>
+            <div class="item">
+                <div class="icon">
+                    <i class="fa-solid fa-pencil"></i>
+                </div>
+                <div id="draw" class="nav-text">
+                    <h1><a class="title" href="#section-5">rysunek odręczny</a></h1>
+                </div>
+            </div>
+            <div class="item">
+                <div class="icon">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <div id="visual" class="nav-text">
+                    <h1><a class="title" href="#section-6">wizualizacje</a></h1>
+                </div>
+            </div>
+            <div class="item">
+                <div class="icon">
+                    <i class="fa-solid fa-microscope"></i>
+                </div>
+                <div id="strukture" class="nav-text">
+                    <h1><a class="title" href="#section-7">struktury</a></h1>
+                </div>
+            </div>
+            <div class="item">
+                <div class="icon">
+                    <i class="fa-solid fa-note-sticky"></i>
+                </div>
+                <div id="label" class="nav-text">
+                    <h1><a class="title" href="#section-8">etykieta na kubek</a></h1>
+                </div>
+            </div>
+            <div class="item">
+                <div class="icon">
+                    <i class="fa-solid fa-wine-bottle"></i>
+                </div>
+                <div id="glass" class="nav-text">
+                    <h1><a class="title" href="#section-9">moja butelka</a></h1>
+                </div>
+            </div>
+            <div class="item">
+                <div class="icon">
+                    <i class="fa-solid fa-chess-board"></i>
+                </div>
+                <div id="board" class="nav-text">
+                    <h1><a class="title" href="#section-10">plansze</a></h1>
+                </div>
+            </div>
+            <div class="item">
+                <div class="icon">
+                    <i class="fa-solid fa-book-open-reader"></i>
+                </div>
+                <div id="leaflet" class="nav-text">
+                    <h1><a class="title" href="#section-11">ulotka</a></h1>
+                </div>
+            </div>
+            <div class="item">
+                <div class="icon">
+                    <i class="fa-solid fa-chair"></i>
+                </div>
+                <div id="seat" class="nav-text">
+                    <h1><a class="title" href="#section-12">projekt siedziska</a></h1>
+                </div>
+            </div>
+            <div class="item">
+                <div class="icon">
+                    <i class="fa-solid fa-shirt"></i>
+                </div>
+                <div id="tshirt" class="nav-text">
+                    <h1><a class="title" href="#section-13">koszulki</a></h1>
+                </div>
+            </div>
+            <div class="item">
+                <div class="icon">
+                    <i class="fa-solid fa-signature"></i>
+                </div>
+                <div id="logo" class="nav-text">
+                    <h1><a class="title" href="#section-14">plakietka z logo</a></h1>
+                </div>
+            </div>
+            <div class="circle">
+                <a href="#contact"><i class="fa-solid fa-envelope"></i></a>
+            </div>
         </div>
     </div>
-</div> -->
+    <div class="right-side">
+        <div class="list">
+            <h1><a class="title" href="#home">główna</a></h1>
+            <h1><a class="title" href="#contact">kontakt</a></h1>
+        </div>
+    </div>
+</div>
