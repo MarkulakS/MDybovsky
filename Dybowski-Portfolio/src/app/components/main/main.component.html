@@ -399,118 +399,16 @@
             <div class="circle">
                 <a href="#home"><i id="ic-home" class="fa-solid fa-house in-circle"></i></a>
             </div>
-            <!-- <div *ngFor="" class="item">
+
+            <div class="item" *ngFor="let icon of iconList" #item>
                 <div class="icon">
-                    <a href="#{{href_section}}"><i class="fa-solid {{icon}}"></i></a>
-                </div>
-                <div id="{{id}}" class="nav-text">
-                    <h1><a href="{{href_section}}" class="title">{{title_section}}</a></h1>
-                </div>
-            </div> -->
-            <div class="item">
-                <div class="icon">
-                    <a href="#section-3"><i id="section-3" class="fa-solid fa-cube "></i></a>
+                    <a href="#{{icon.id}}"><i id="{{icon.id}}" class="fa-solid {{icon.icon}}" [ngClass]="{'visible': isLinkActive(icon.id)}"></i></a>
                 </div>
                 <div class="nav-text">
-                    <h1><a class="title" href="#section-3">grafika 3D</a></h1>
+                    <h1><a href="#{{icon.id}}" class="title">{{icon.title}}</a></h1>
                 </div>
             </div>
-            <div class="item">
-                <div class="icon">
-                    <a href="#section-4"><i id="section-4" class="fa-solid fa-brush"></i></a>
-                </div>
-                <div id="painting" class="nav-text">
-                    <h1><a class="title" href="#section-4">malarstwo</a></h1>
-                </div>
-            </div>
-            <div class="item">
-                <div class="icon">
-                    <a href="#section-5"><i class="fa-solid fa-pencil"></i></a>
-                </div>
-                <div id="draw" class="nav-text">
-                    <h1><a class="title" href="#section-5">rysunek odręczny</a></h1>
-                </div>
-            </div>
-            <div class="item">
-                <div class="icon">
-                    <a href="#section-6"><i class="fa-solid fa-laptop-code"></i></a>
-                </div>
-                <div id="visual" class="nav-text">
-                    <h1><a class="title" href="#section-6">wizualizacje</a></h1>
-                </div>
-            </div>
-            <div class="item">
-                <div class="icon">
-                    <a href="#section-7"><i class="fa-solid fa-microscope"></i></a>
-                </div>
-                <div id="strukture" class="nav-text">
-                    <h1><a class="title" href="#section-7">struktury</a></h1>
-                </div>
-            </div>
-            <div class="item">
-                <div class="icon">
-                    <a href="#section-8"><i class="fa-solid fa-note-sticky"></i></a>
-                </div>
-                <div id="label" class="nav-text">
-                    <h1><a class="title" href="#section-8">etykieta na kubek</a></h1>
-                </div>
-            </div>
-            <div class="item">
-                <div class="icon">
-                    <a href="#section-9"><i class="fa-solid fa-wine-bottle"></i></a>
-                </div>
-                <div id="glass" class="nav-text">
-                    <h1><a class="title" href="#section-9">moja butelka</a></h1>
-                </div>
-            </div>
-            <div class="item">
-                <div class="icon">
-                    <a href="#section-10"><i class="fa-solid fa-chess-board"></i></a>
-                </div>
-                <div id="board" class="nav-text">
-                    <h1><a class="title" href="#section-10">plansze</a></h1>
-                </div>
-            </div>
-            <div class="item">
-                <div class="icon">
-                    <a href="#section-11"><i class="fa-solid fa-book-open-reader"></i></a>
-                </div>
-                <div id="leaflet" class="nav-text">
-                    <h1><a class="title" href="#section-11">ulotka</a></h1>
-                </div>
-            </div>
-            <div class="item">
-                <div class="icon">
-                    <a href="#section-12"><i class="fa-solid fa-chair"></i></a>
-                </div>
-                <div id="seat" class="nav-text">
-                    <h1><a class="title" href="#section-12">projekt siedziska</a></h1>
-                </div>
-            </div>
-            <div class="item">
-                <div class="icon">
-                    <a href="#section-13"><i class="fa-solid fa-shirt"></i></a>
-                </div>
-                <div id="tshirt" class="nav-text">
-                    <h1><a class="title" href="#section-13">koszulki</a></h1>
-                </div>
-            </div>
-            <div class="item">
-                <div class="icon">
-                    <a href="#section-14"><i class="fa-solid fa-signature"></i></a>
-                </div>
-                <div id="logo" class="nav-text">
-                    <h1><a class="title" href="#section-14">plakietka z logo</a></h1>
-                </div>
-            </div>
-            <div class="item">
-                <div class="icon">
-                    <a href="#section-15"><i class="fa-solid fa-child-reaching"></i></a>
-                </div>
-                <div id="logo" class="nav-text">
-                    <h1><a class="title" href="#section-15">chill room</a></h1>
-                </div>
-            </div>
+
             <div class="circle">
                 <a href="#contact"><i class="fa-solid fa-envelope"></i></a>
             </div>

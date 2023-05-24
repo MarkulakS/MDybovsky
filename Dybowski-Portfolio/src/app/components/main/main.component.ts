@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import icons  from '../icons';
 
 @Component({
   selector: 'app-main',
@@ -6,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
+
+  @ViewChildren('item') itemRefs?: QueryList<ElementRef>;
+  activeLinkId: string | null = null;
+  iconList = icons;
 
   constructor() { }
 
@@ -27,26 +32,34 @@ export class MainComponent implements OnInit {
         nav?.classList.remove('nav-OFF');
       }
     });
+  }
 
+  @HostListener('window:scroll', ['$event'])
+  onScroll(event: Event) {
+    this.setActiveLink();
+  }
 
-    let section = document.querySelectorAll('section');
-    let navLinks = document.querySelectorAll('.navbar .left-bar .list .item .icon i');
+  setActiveLink() {
+    const sectionElements = document.querySelectorAll('section');
+    let activeLink = null;
 
-    window.onscroll = () => {
-      section.forEach(sec => {
-        let top = window.scrollY;
-        let offset = sec.offsetTop - 150;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute('id');
+    sectionElements.forEach((sec: HTMLElement) => {
+      const top = window.scrollY;
+      const offset = sec.offsetTop - 150;
+      const height = sec.offsetHeight;
+      const id = sec.getAttribute('id');
 
-        if(top >= offset && top < offset + height) {
-          navLinks.forEach(links => {
-            links.classList.remove('visible');
-            document.querySelector('.navbar .left-bar .list .item .icon a[href*=' + id + '] i')?.classList.add('visible');
-          })
-        }
-      })
-    };
+      if (top >= offset && top < offset + height) {
+        activeLink = id;
+        return;
+      }
+    });
+
+    this.activeLinkId = activeLink;
+  }
+
+  isLinkActive(id: string): boolean {
+    return this.activeLinkId === id;
   }
 
 }
