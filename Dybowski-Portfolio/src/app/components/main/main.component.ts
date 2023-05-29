@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, HostListener, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import icons  from '../icons';
 
 @Component({
@@ -8,7 +8,6 @@ import icons  from '../icons';
 })
 export class MainComponent implements OnInit {
 
-  @ViewChildren('item') itemRefs?: QueryList<ElementRef>;
   activeLinkId: string | null = null;
   iconList = icons;
 
@@ -25,11 +24,27 @@ export class MainComponent implements OnInit {
       );
     };   
 
+    var burger = document.getElementById('hamburger');
+    var list = document.getElementById('list-mobile');
+
     document.addEventListener('scroll', function () {
       if (isInViewport(box)) {
         nav?.classList.add('nav-OFF');
+        nav?.classList.remove('nav-flex');
       } else {
         nav?.classList.remove('nav-OFF');
+        nav?.classList.add('nav-flex');
+      }
+
+      const scrollPositionY = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      let actualPosition = 0;
+
+      if (burger?.classList.contains("clicked")) {
+        actualPosition = scrollPositionY;
+        if (actualPosition != 0) {
+          burger?.classList.remove("clicked");
+          list?.classList.remove("list-display-on")
+        }
       }
     });
   }
@@ -60,6 +75,22 @@ export class MainComponent implements OnInit {
 
   isLinkActive(id: string): boolean {
     return this.activeLinkId === id;
+  }
+
+  focusHamburger() {
+    var burger = document.getElementById('hamburger');
+    var list = document.getElementById('list-mobile');
+
+    if (!burger?.classList.contains("clicked")) 
+    {
+      burger?.classList.add("clicked");
+      list?.classList.add("list-display-on")
+    }
+    else if (burger?.classList.contains("clicked")) 
+    {
+      burger?.classList.remove("clicked");
+      list?.classList.remove("list-display-on")
+    }
   }
 
 }

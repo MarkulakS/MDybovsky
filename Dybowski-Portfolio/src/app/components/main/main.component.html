@@ -402,7 +402,8 @@
 
             <div class="item" *ngFor="let icon of iconList" #item>
                 <div class="icon">
-                    <a href="#{{icon.id}}"><i id="{{icon.id}}" class="fa-solid {{icon.icon}}" [ngClass]="{'visible': isLinkActive(icon.id)}"></i></a>
+                    <a href="#{{icon.id}}"><i id="{{icon.id}}" class="fa-solid {{icon.icon}}" 
+                        [ngClass]="{'visible': isLinkActive(icon.id)}"></i></a>
                 </div>
                 <div class="nav-text">
                     <h1><a href="#{{icon.id}}" class="title">{{icon.title}}</a></h1>
@@ -412,6 +413,24 @@
             <div class="circle">
                 <a href="#contact"><i class="fa-solid fa-envelope"></i></a>
             </div>
+        </div>
+    </div>
+    <div class="top-bar">
+        <div class="title-nav">
+            <h1><a href="#home">MDYBOVSKY</a></h1>
+        </div>
+        <div id="hamburger" class="hamburger" (click)="focusHamburger()">
+            <span class="line-0"></span>
+            <span class="line-1"></span>
+            <span class="line-2"></span>
+        </div>
+        <div id="list-mobile" class="list-mobile">
+            <ul class="navItems-m">
+                <li><a href="#home">Główna</a></li>
+                <li *ngFor="let icon of iconList"><a href="#{{icon.id}}">{{icon.title}}</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+            <p>© 2023 Mateusz Dybowski</p>
         </div>
     </div>
 </div>
