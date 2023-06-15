@@ -127,9 +127,11 @@ $--clr-black: #56565a;
                         text-decoration: none;
                         text-transform: capitalize;
                     }
+                    a:hover, a:focus, a:focus-visible {
+                        color: $--clr-gold;
+                    }
                 }      
-                li:hover a, li:focus a {
-    
+                li:hover a, li:focus a, li:focus-visible a {
                     color: $--clr-gold;
                 }
             }
@@ -1493,6 +1495,76 @@ section {
 
 }
 
+.logo-2 {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        width: 30vw;
+        margin-left: 10%;
+        .title {
+            font-size: 6rem;
+            line-height: 5.5rem;
+        }
+        p {
+            font-size: 1.1rem;
+        }
+    }
+    .bg-image {
+        position: relative;
+        display: flex;
+        margin: auto;
+        width: 35vw;
+        height: 100%;
+        z-index: 1;
+        .bg-circle {
+            display: block;
+            margin: auto;
+            margin-left: 10%;
+            width: 30vw;
+            height: 30vw;
+            background-color: #fff;
+            border-radius: 50% 50%;
+            z-index: -1;
+        }
+        .image {
+            display: block;
+            margin: auto;
+            margin-left: -90%;
+            width: 20vw;
+            height: 25vw;
+            background-image: url('/assets/images/cytrynka.png');
+            background-size: cover;
+        }
+    }
+    .bg-image:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 45%;
+        width: 10%;
+        height: 100%;
+        background-color: $--clr-black;
+        z-index: -1;
+    }
+
+    .obstacle {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 20vw;
+        margin: auto;
+        margin-right: 0;
+        background-color: $--clr-gold;
+        z-index: 0;
+    }
+}
+
 .module {
     .content {
         position: relative;
@@ -2045,6 +2117,10 @@ section {
             }
         }
     }
+    .logo-2 .text .title {
+        font-size: 4rem;
+        line-height: 3.5rem;
+    }
     .module .content {
         .text {
             order: 1;
@@ -2347,6 +2423,26 @@ section {
             }
         }
     }
+    .logo-2 {
+        .text .title {
+            font-size: 3.5rem;
+            line-height: 3rem;
+        }
+        .bg-image {
+            width: 45vw;
+            .bg-circle {
+                width: 40vw;
+                height: 40vw;
+            }
+            .image {
+                width: 30vw;
+                height: 35vw;
+            }
+        }
+        .obstacle {
+            width: 30vw;
+        }
+    }
     .module .content {
         .image-1 {
             margin-top: 0;
@@ -2487,6 +2583,15 @@ section {
         .text {
             width: 100%;
             margin: auto 2%;
+        }
+    }
+    .logo-2 {
+        .text {
+            width: 40vw;
+            margin-left: 5%;
+        }
+        .obstacle {
+            width: 29vw;
         }
     }
     .module .content {
@@ -2753,6 +2858,34 @@ section {
         .image {
             width: 75%;
             height: 75vw;
+        }
+    }
+    .logo-2 {
+        flex-direction: column;
+        .text {
+            width: 80%;
+            height: 30%;
+            margin: auto;
+            margin-top: 5%;
+        }
+        .bg-image {
+            width: 80%;
+            .bg-circle {
+                width: 70vw;
+                height: 70vw;
+                margin-left: 7%;
+            }
+            .image {
+                width: 55vw;
+                height: 65vw;
+                margin-left: -93%;
+            }
+        }
+        .bg-image:before {
+            opacity: 0;
+        }
+        .obstacle {
+            opacity: 0;
         }
     }
     .module .content {
