@@ -5,7 +5,7 @@
 <p>Jest to strona internetowa, która służy jako wizytówka umiejętności klienta.<br>
 Strona została napisana pod wytyczne klienta.</p>
 
-### *Strona w rozbudowie*
+### Odwiedź stronę <a href='https://mdybovsky.netlify.app'>https://mdybovsky.netlify.app</a>
 
 ## Narzędzia i technologie użyte w projekcie:
 - Visual Studio Code (środowisko)
@@ -35,7 +35,7 @@ Prosimy o nie korzystanie z tych materiałów bez uprzedniej zgody ich właścic
 <p>This is a website that serves as a showcase of customer skills.<br>
 The site was written under the client's guidelines.</p>
 
-### *Page under construction*
+### Visit website <a href='https://mdybovsky.netlify.app'>https://mdybovsky.netlify.app</a>
 
 ## Tools & technologies used in the project:
 - Visual Studio Code (environment)
